@@ -25,6 +25,137 @@
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/tabArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/lblDeArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="De:"
+                        android:textStyle="bold" />
+                    <Spinner
+                        android:id="@+id/cboDeArea"
+                        android:entries="@array/conversorArea"
+                        android:layout_marginLeft="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/lblDeAr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lblDeArea"
+                        android:layout_marginTop="40dp"
+                        android:text="A:"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/cboDeAr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lblDeAr"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="-22dp"
+                        android:entries="@array/conversorArea" />
+
+                    <EditText
+                        android:id="@+id/txtcantidadAr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cboDeAr"
+                        android:layout_marginTop="40dp"
+                        android:hint="Cantidad"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/IblRespuestaAr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtcantidadAr"
+                        android:layout_marginTop="12dp"
+                        android:inputType="number"
+                        android:text="Respuesta: ?" />
+
+                    <Button
+                        android:id="@+id/btncalcularAr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/IblRespuestaAr"
+                        android:text="Calcular" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tabVolumen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/lblDeV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="De:"
+                        android:textStyle="bold" />
+                    <Spinner
+                        android:id="@+id/cboDeV"
+                        android:entries="@array/conversorVolumen"
+                        android:layout_marginLeft="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/lblDeAV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lblDeV"
+                        android:layout_marginTop="40dp"
+                        android:text="A:"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/cboDeAV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lblDeAV"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="-22dp"
+                        android:entries="@array/conversorVolumen" />
+
+                    <EditText
+                        android:id="@+id/txtcantidadV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cboDeAV"
+                        android:layout_marginTop="40dp"
+                        android:hint="Cantidad"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/IblRespuestaV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtcantidadV"
+                        android:layout_marginTop="12dp"
+                        android:inputType="number"
+                        android:text="Respuesta: ?" />
+
+                    <Button
+                        android:id="@+id/btncalcularV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/IblRespuestaV"
+                        android:text="Calcular" />
+
+                </RelativeLayout>
+
+
 
                 <RelativeLayout
                     android:id="@+id/tabLongitud"
