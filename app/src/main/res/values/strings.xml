@@ -25,5 +25,28 @@
         <item>Millas</item>
         <item>Millas Nauticas</item>
     </string-array>
-
+    <string-array name="conversorVolumen">
+        <item>Mililitros</item>
+        <item>Centimetros cúbicos</item>
+        <item>Litros</item>
+        <item>Metro cúbico</item>
+        <item>Cucharadita (EE:UU)</item>
+        <item>Cucharadas (EE:UU)</item>
+        <item>Onzas líquidas</item>
+        <item>Tazas</item>
+        <item>Pintas</item>
+        <item>Cuartos de galón</item>
+    </string-array>
+    <string-array name="conversorArea">
+        <item>Hectarea</item>
+        <item>Manzana(Costa Rica)</item>
+        <item>Tarea</item>
+        <item>Varas (Cuadrada)</item>
+        <item>Metros cuadrados</item>
+        <item>Kilómetros cuadrados</item>
+        <item>Pulgadas cuadradas</item>
+        <item>Pies cuadrados</item>
+        <item>Yarda cuadrada</item>
+        <item>Acres</item>
+    </string-array>
 </resources>

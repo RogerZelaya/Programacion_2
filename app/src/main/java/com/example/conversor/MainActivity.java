@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         tbhConversores.addTab(tbhConversores.newTabSpec("Monedas").setContent(R.id.tabMonedas).setIndicator("M"));
         tbhConversores.addTab(tbhConversores.newTabSpec("Longitud").setContent(R.id.tabLongitud).setIndicator("L"));
         tbhConversores.addTab(tbhConversores.newTabSpec("Masa").setContent(R.id.tabMasa).setIndicator("P"));
-
+        tbhConversores.addTab(tbhConversores.newTabSpec("Volumen").setContent(R.id.tabVolumen).setIndicator("V"));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Area").setContent(R.id.tabArea).setIndicator("A"));
         btnConvertir = findViewById(R.id.btncalcular);
         btnConvertir.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,24 +55,68 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnConvertir = findViewById(R.id.btncalcularL);
-        btnConvertir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+           btnConvertir = findViewById(R.id.btncalcularL);
+                btnConvertir.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
-                tempVal = (EditText) findViewById(R.id.txtcantidadL);
-                Double cantidad = Double.parseDouble(tempVal.getText().toString());
+                        tempVal = (EditText) findViewById(R.id.txtcantidadL);
+                        Double cantidad = Double.parseDouble(tempVal.getText().toString());
 
-                spnOptionDe = findViewById(R.id.cboDeL);
-                spnOptionA = findViewById(R.id.cboDeAL);
-                tempVal = findViewById(R.id.IblRespuestaL);
+                        spnOptionDe = findViewById(R.id.cboDeL);
+                        spnOptionA = findViewById(R.id.cboDeAL);
+                        tempVal = findViewById(R.id.IblRespuestaL);
 
-                tempVal.setText("Respuesta: " + miConversor.covertir(1, spnOptionDe.getSelectedItemPosition(), spnOptionA.getSelectedItemPosition(), cantidad));
-            }
+                        tempVal.setText("Respuesta: " + miConversor.covertir(1, spnOptionDe.getSelectedItemPosition(), spnOptionA.getSelectedItemPosition(), cantidad));
+
+                    }
+
 
         });
-    }
-}
+
+
+        btnConvertir = findViewById(R.id.btncalcularV);
+        btnConvertir.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+        tempVal = (EditText) findViewById(R.id.txtcantidadV);
+        Double cantidad = Double.parseDouble(tempVal.getText().toString());
+
+        spnOptionDe = findViewById(R.id.cboDeV);
+        spnOptionA = findViewById(R.id.cboDeAV);
+        tempVal = findViewById(R.id.IblRespuestaV);
+
+        tempVal.setText("Respuesta: " + miConversor.covertir(1, spnOptionDe.getSelectedItemPosition(), spnOptionA.getSelectedItemPosition(), cantidad));
+
+        }
+
+
+        });
+
+
+        btnConvertir = findViewById(R.id.btncalcularAr);
+                btnConvertir.setOnClickListener(new View.OnClickListener() {
+@Override
+public void onClick(View v) {
+
+        tempVal = (EditText) findViewById(R.id.txtcantidadAr);
+        Double cantidad = Double.parseDouble(tempVal.getText().toString());
+
+        spnOptionDe = findViewById(R.id.cboDeArea);
+        spnOptionA = findViewById(R.id.cboDeAr);
+        tempVal = findViewById(R.id.IblRespuestaAr);
+
+        tempVal.setText("Respuesta: " + miConversor.covertir(1, spnOptionDe.getSelectedItemPosition(), spnOptionA.getSelectedItemPosition(), cantidad));
+
+        }
+
+
+        });
+        }
+        }
+
+
 
 class conversores{
 
@@ -79,6 +124,8 @@ class conversores{
             {1.0, 8.85, 7.77, 24.05, 34.89, 608.72, 20.08, 0.83, 0.73, 105.0}, /*Monedas*/
             {1000000., 1000.,100., 39.37, 3.28,1.09, 1., 0.001, 0.000621,0.00054 }, /*Longitud*/
             {1.0}, /*Peso*/
+            { 1.0, 0.06, 0.001, 0.000001, 0.202884, 0.067628, 0.033814, 0.004227, 0.002113, 0.001057},//Volumen//
+            {1.0,1.430828, 15.903307888,14233.213, 10.000,  0.01, 15.500031, 107.639,11.960, 2.471054}
     };
     public double covertir(int option, int de, int a, double cantidad){
         return conversor[option][a]/ conversor[option][de] * cantidad;
