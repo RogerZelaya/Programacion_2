@@ -49,4 +49,28 @@
         <item>Yarda cuadrada</item>
         <item>Acres</item>
     </string-array>
+    <string-array name="conversorMasa">
+        <item>Libras</item>
+        <item>Kilogramos</item>
+        <item>Onzas</item>
+        <item>Miligramos</item>
+        <item>Gramos</item>
+        <item>Hectogramos</item>
+        <item>Toneladas Metricas</item>
+        <item>Toneladas largas (Reino Unido)</item>
+        <item>Toneladas Cortas(EE.UU.)</item>
+        <item>Decagramos</item>
+    </string-array>
+    <string-array name="conversorTiempo">
+        <item>Hora</item>
+        <item>Nanosegundos</item>
+        <item>Microsegundos</item>
+        <item>Milisegundos</item>
+        <item>Segundos</item>
+        <item>Minutos</item>
+        <item>Días</item>
+        <item>Semanas</item>)
+        <item>Mes</item>
+    </string-array>
+
 </resources>
