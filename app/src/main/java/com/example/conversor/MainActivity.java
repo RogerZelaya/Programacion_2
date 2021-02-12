@@ -31,8 +31,10 @@ public class MainActivity extends AppCompatActivity {
         tbhConversores.addTab(tbhConversores.newTabSpec("Monedas").setContent(R.id.tabMonedas).setIndicator("M"));
         tbhConversores.addTab(tbhConversores.newTabSpec("Longitud").setContent(R.id.tabLongitud).setIndicator("L"));
         tbhConversores.addTab(tbhConversores.newTabSpec("Masa").setContent(R.id.tabMasa).setIndicator("P"));
+        tbhConversores.addTab(tbhConversores.newTabSpec("Tiempo").setContent(R.id.tabTiempo).setIndicator("T"));
         tbhConversores.addTab(tbhConversores.newTabSpec("Volumen").setContent(R.id.tabVolumen).setIndicator("V"));
         tbhConversores.addTab(tbhConversores.newTabSpec("Area").setContent(R.id.tabArea).setIndicator("A"));
+
         btnConvertir = findViewById(R.id.btncalcular);
         btnConvertir.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +76,44 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        btnConvertir = findViewById(R.id.btncalcularMa);
+        btnConvertir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                tempVal = (EditText) findViewById(R.id.txtcantidadMa);
+                Double cantidad = Double.parseDouble(tempVal.getText().toString());
+
+                spnOptionDe = findViewById(R.id.cboDeMasa);
+                spnOptionA = findViewById(R.id.cboDeMa);
+                tempVal = findViewById(R.id.IblRespuestaMa);
+
+                tempVal.setText("Respuesta: " + miConversor.covertir(2, spnOptionDe.getSelectedItemPosition(), spnOptionA.getSelectedItemPosition(), cantidad));
+
+            }
+
+
+        });
+        btnConvertir = findViewById(R.id.btncalcularTi);
+        btnConvertir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                tempVal = (EditText) findViewById(R.id.txtcantidadTi);
+                Double cantidad = Double.parseDouble(tempVal.getText().toString());
+
+                spnOptionDe = findViewById(R.id.cboDeTiempo);
+                spnOptionA = findViewById(R.id.cboDeTi);
+                tempVal = findViewById(R.id.IblRespuestaTi);
+
+                tempVal.setText("Respuesta: " + miConversor.covertir(3, spnOptionDe.getSelectedItemPosition(), spnOptionA.getSelectedItemPosition(), cantidad));
+
+            }
+
+
+        });
+
+
 
         btnConvertir = findViewById(R.id.btncalcularV);
         btnConvertir.setOnClickListener(new View.OnClickListener() {
@@ -87,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
         spnOptionA = findViewById(R.id.cboDeAV);
         tempVal = findViewById(R.id.IblRespuestaV);
 
-        tempVal.setText("Respuesta: " + miConversor.covertir(1, spnOptionDe.getSelectedItemPosition(), spnOptionA.getSelectedItemPosition(), cantidad));
+        tempVal.setText("Respuesta: " + miConversor.covertir(4, spnOptionDe.getSelectedItemPosition(), spnOptionA.getSelectedItemPosition(), cantidad));
 
         }
 
@@ -107,7 +147,7 @@ public void onClick(View v) {
         spnOptionA = findViewById(R.id.cboDeAr);
         tempVal = findViewById(R.id.IblRespuestaAr);
 
-        tempVal.setText("Respuesta: " + miConversor.covertir(1, spnOptionDe.getSelectedItemPosition(), spnOptionA.getSelectedItemPosition(), cantidad));
+        tempVal.setText("Respuesta: " + miConversor.covertir(5, spnOptionDe.getSelectedItemPosition(), spnOptionA.getSelectedItemPosition(), cantidad));
 
         }
 
@@ -123,7 +163,8 @@ class conversores{
     Double[][]conversor = {
             {1.0, 8.85, 7.77, 24.05, 34.89, 608.72, 20.08, 0.83, 0.73, 105.0}, /*Monedas*/
             {1000000., 1000.,100., 39.37, 3.28,1.09, 1., 0.001, 0.000621,0.00054 }, /*Longitud*/
-            {1.0}, /*Peso*/
+            {1.0,0.453592,16.0,453592.4,453.5924,4.535924,0.000454,0.000446,0.0005,45.35924}, /*Masa*/
+            {1.0,3.6e+12,3.6e+9,3.6e+6,3600.0,60.0,0.0416667,0.00595238,0.00136986,1.1416e-5}, /*Tiempo*/
             { 1.0, 0.06, 0.001, 0.000001, 0.202884, 0.067628, 0.033814, 0.004227, 0.002113, 0.001057},//Volumen//
             {1.0,1.430828, 15.903307888,14233.213, 10.000,  0.01, 15.500031, 107.639,11.960, 2.471054}
     };
