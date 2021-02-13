@@ -72,5 +72,27 @@
         <item>Semanas</item>)
         <item>Mes</item>
     </string-array>
+    <string-array name="conversorAlmacenamiento">
+        <item>Bits</item>
+        <item>Bytes</item>
+        <item>Kilobits</item>
+        <item>Kilobytes</item>
+        <item>Megabits</item>
+        <item>Megabytes</item>
+        <item>Gigabits</item>
+        <item>Gigabytes</item>
+        <item>Terabits</item>
+        <item>Terabytes</item>
+    </string-array>
+    <string-array name="conversorTemperatura">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+
+
+
+
+
 
 </resources>
