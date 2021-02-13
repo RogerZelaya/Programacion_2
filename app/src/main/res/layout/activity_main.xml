@@ -27,26 +27,26 @@
                 android:layout_height="match_parent">
 
 
-
-
                 <RelativeLayout
                     android:id="@+id/tabTemperatura"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/lblDeTm"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="De:"
                         android:textStyle="bold" />
+
                     <Spinner
                         android:id="@+id/cboDeTm"
-                        android:entries="@array/conversorTemperatura"
-                        android:layout_marginLeft="40dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:entries="@array/conversorTemperatura" />
 
                     <TextView
                         android:id="@+id/lblDeTem"
@@ -73,7 +73,8 @@
                         android:layout_below="@+id/cboDeTem"
                         android:layout_marginTop="40dp"
                         android:hint="Cantidad"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:textStyle="bold" />
                     cual de los dos esotos es la cantidad ?
 
                     <EditText
@@ -81,7 +82,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/txtcantidadTm"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="29dp"
                         android:inputType="number"
                         android:text="Respuesta: ?" />
 
@@ -89,12 +90,12 @@
                         android:id="@+id/btncalcularTem"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:layout_below="@+id/IblRespuestaTm"
-                        android:text="Calcular" />
+                        android:layout_marginTop="44dp"
+                        android:text="Calcular"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
-
 
                 <RelativeLayout
                     android:id="@+id/tabAlmacenamiento"
